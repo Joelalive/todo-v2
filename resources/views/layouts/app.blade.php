@@ -22,12 +22,19 @@
       <li class="nav-item active">
         <a class="nav-link" href="/todos">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="new-todo">Create todos <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
-
+@if(session()->has('success'))
+<div class="alert alert-success">
+  {{session()->get('success')}}
+</div>
+@endif
 @yield('content')
 
 </div>

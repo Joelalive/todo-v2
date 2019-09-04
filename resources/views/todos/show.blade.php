@@ -22,6 +22,8 @@ Single Todo: {{$todo->name}}
                 {{$todo->description}}
             </div>
         </div>
+        <a href="/todos/{{$todo->id}}/edit" class="btn btn-info btn-md my-2">Edit</a>
+        <a href="/todos/{{$todo->id}}/delete" class="btn btn-danger btn-md my-2">Delete</a>
     </div>
 </div>
 
